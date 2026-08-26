@@ -462,7 +462,7 @@ function Projects() {
                   <div>
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {p.tags.map((t) => (
-                        <span key={t} className="text-sm font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">
+                        <span key={t} className="text-xs font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">
                           {t}
                         </span>
                       ))}
@@ -504,7 +504,7 @@ function Projects() {
               {expanded === i && (
                 <div className="border-t border-purple-100 grid md:grid-cols-2 gap-6 p-6 bg-[#F0EDFF]">
                   <div>
-                    <h4 className="text-sm font-bold uppercase tracking-wider text-purple-600 mb-3">Key Features</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-purple-600 mb-3">Key Features</h4>
                     <ul className="space-y-2">
                       {p.features.map((f) => (
                         <li key={f} className="text-sm text-slate-700 flex gap-2 items-start">
