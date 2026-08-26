@@ -1,73 +1,54 @@
-# Portfolio Visual Presentation & Screenshot Pipeline
+# Portfolio Typography Scale-Up
 
 ## WHAT
-Make the portfolio website visibly larger and more spacious, switch project imagery to a local-screenshot pipeline with automatic fallback, and provide the owner a checklist of exactly which screenshots to capture for projects that have no deployable UI.
+Make every piece of text on the portfolio website substantially larger while preserving layout integrity and visual hierarchy.
 
 ## WHY
-The site currently uses compact spacing and generic stock photos. The owner wants a roomier visual presentation and a path to authentic project screenshots they will supply themselves (most projects are CLI/desktop apps with no live URL).
+The owner finds the current type too small for comfortable reading after the spacing overhaul; text should read "much bigger" across nav, hero, sections, cards, and footer.
 
-## Recorded Baseline (pre-change measurements)
-- Content container: `max-w-6xl` = 1152px
-- Section vertical padding: `py-20` (80px)
-- Hero top padding: `pt-28`; hero heading: `text-4xl` / `md:text-5xl`
-- Project card media area: `h-48` (192px) on mobile, full-height column on desktop
-- Stat card padding: `p-5`
+## Recorded Baseline (pre-change)
+- Root font-size: browser default 16px (no override in src/index.css)
+- Section headings (h2): text-2xl md:text-3xl
+- Contact heading: text-3xl md:text-4xl
+- Hero h1: text-5xl md:text-6xl (post previous loop)
+- Stat values: text-3xl
+- Dense body copy (points, summaries, meta): text-xs / text-[11px]
+- Nav links & buttons: text-xs
 
 ## Functional Requirements
 
-### FR-001 — Spacious layout scale
-The site SHALL render all page sections inside a content container of at least 1280px maximum width, with section vertical padding of at least 96px on desktop viewports, applied consistently across hero, stack, skills, experience, education, projects, contact, and footer.
+### FR-001 — Larger root scale
+The site SHALL render at a root font-size of at least 18px so all rem-based Tailwind sizes scale up globally.
 
-### FR-002 — Larger hero and stat presentation
-The hero heading SHALL render at a larger type scale than the recorded baseline at both mobile and desktop widths, and stat cards SHALL use more inner padding than the recorded baseline.
+### FR-002 — Larger section headings
+Every section heading SHALL use at least text-3xl on mobile and text-4xl on desktop viewports; the contact heading shall exceed this by one step.
 
-### FR-003 — Larger project imagery
-Each featured-project card SHALL display its image in a media area at least 224px tall on narrow viewports (up from the 192px baseline), preserving the fill-and-cover presentation.
+### FR-003 — Larger body copy
+No primary reading content (experience points, project summaries/feature lists, education details, contact lines) SHALL remain below text-sm; the smallest decorative labels may be text-xs but never text-[10px] or smaller.
 
-### FR-004 — Local screenshot source of truth
-Every featured project SHALL reference its primary image from a local static screenshot file. The exact filenames are normative:
+### FR-004 — Larger hero and stats
+Hero supporting paragraphs SHALL be at least text-base; stat card values SHALL be at least text-5xl.
 
-| Project | Screenshot filename |
-| --- | --- |
-| POS Accessories CLI System | pos-accessories-cli.png |
-| Elevator Visual & Analyze | elevator-visual-analyze.png |
-| LDPlayer Automation Tool | ldplayer-automation.png |
-| ArtiFlow Article Management | artiflow-article-management.png |
-| Joy Journal Daily | joy-journal-daily.png |
-| GrimHill | grimhill.png |
+### FR-005 — Layout preservation
+The type increase SHALL NOT introduce horizontal overflow at 360px viewport width or break single-column stacking.
 
-Screenshot URLs SHALL resolve correctly under any deployment base path configuration (root or prefixed).
-
-### FR-005 — Automatic fallback
-When a referenced screenshot is absent or unreadable (missing file, corrupt encoding), the UI SHALL silently fall back to the current stock photograph with no user-visible error UI, no unhandled exceptions, and no layout shift beyond the normal image box.
-
-### FR-006 — Screenshot checklist document
-A markdown checklist document at `docs/SCREENSHOT_CHECKLIST.md` SHALL list every project in the featured-projects data with: its exact target filename from the FR-004 table, the exact destination directory where each screenshot must be placed (matching the paths referenced per FR-004), precisely what to capture (screen/view/state), concrete capture steps, recommended dimensions matching the rendered media-area aspect ratio (~5:3 landscape), a file-size budget, exact lowercase `.png` extension with a case-sensitivity warning, and an acceptable-crop note explaining center-crop behavior for non-matching aspect ratios.
-
-### FR-007 — Small-viewport preservation
-After the spacing increases, the site SHALL remain usable at 360px viewport width: no horizontal overflow, and the two-column stat grid and navigation remain functional.
-
-### FR-008 — Build integrity
-The production build SHALL pass after all changes.
+### FR-006 — Build integrity
+Production build and TypeScript check SHALL both exit zero.
 
 ## Success Criteria
 
-- SC-001: Given a desktop viewport ≥1280px, when any section is viewed, then the container maximum width is ≥1280px and section padding is ≥96px (vs 1152px / 80px baseline).
-- SC-002: Given every project card in the featured-projects data is rendered, then each card's media area measures ≥224px tall on narrow viewports (vs 192px baseline).
-- SC-003: Given none of the screenshot files exist, when the projects section renders, then every card shows its fallback image with no broken-image glyph and no unhandled exceptions.
-- SC-004: Given exactly one valid PNG exists at its expected path, when the page reloads, then only that project's card shows the real screenshot while all other cards still show fallbacks (independent per-card behavior).
-- SC-005: Given a present-but-corrupt image file at an expected path, when the card renders, then the fallback displays instead of a broken image.
-- SC-006: Given the checklist document is opened at docs/SCREENSHOT_CHECKLIST.md, then every project in the featured-projects data appears with filename, destination path, capture subject, capture steps, ~5:3 dimension guidance, size budget, lowercase-.png/case-sensitivity warning, and the center-crop note.
-- SC-007: Given a 360px-wide viewport, when the full page is rendered, then there is no horizontal scroll and all sections remain usable.
-- SC-008: Given the build command runs, then it exits zero.
+- SC-001: index.css sets html font-size >= 18px.
+- SC-002: grep shows zero remaining `text-xs` inside primary content lists/paragraphs of App.tsx main sections; smallest size present is `text-xs` for chips/meta only.
+- SC-003: SectionHeading renders text-3xl md:text-4xl minimum; Contact heading one step larger.
+- SC-004: Hero paragraphs >= text-base; stat values >= text-5xl.
+- SC-005: bun run build exits 0 AND bunx tsc --noEmit exits 0.
+- SC-006: No horizontal-overflow class patterns introduced (no fixed px widths).
 
 ## Assumptions
-- Fallback images remain remote stock-photo URLs; offline/blocked CDN contexts may show empty media boxes (accepted).
-- Adding a per-project screenshot path field to the project data is permitted within scope.
-- No screenshot-capture tooling is available in this environment; all real screenshots are owner-supplied via the checklist.
+- "Much bigger" = global ~12.5% root bump plus one-to-two Tailwind steps per role, not a doubling.
+- Chips/tags may stay visually small (text-[10px]/[11px] bumped one step to preserve hierarchy).
 
 ## Scope Boundaries
-- No new runtime dependencies.
-- No changes to personal data, copy text, or project metadata beyond the image path fields noted above.
-- Single-page frontend only; no routing, backend, or CMS.
-- Governance files (AGENTS.md, CLAUDE.md) are out of scope.
+- Typography classes and root font-size ONLY.
+- No spacing/layout changes beyond what rem-scaling inherently causes.
+- No content/copy/data changes; no new dependencies; governance files out of scope.

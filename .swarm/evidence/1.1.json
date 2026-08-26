@@ -6,7 +6,7 @@
   "gates": {
     "critic": {
       "sessionId": "ses_fc62db58effeluCPZzPjDZU598",
-      "timestamp": "2026-08-26T04:34:41.533Z",
+      "timestamp": "2026-08-26T06:17:18.304Z",
       "agent": "critic"
     }
   },
@@ -20,8 +20,8 @@
       "dispatch_no_mutation"
     ],
     "retryEpoch": 1,
-    "lastOutcome": "dispatch_attempted",
-    "lastTransitionId": "coder:call_deff916ac629416a9ae436ed",
-    "updatedAt": "2026-08-26T04:37:10.820Z"
+    "lastOutcome": "gate_recorded",
+    "lastTransitionId": "gate:call_99563a85b15348a09a57c86e:1.1",
+    "updatedAt": "2026-08-26T06:17:18.304Z"
   }
 }
