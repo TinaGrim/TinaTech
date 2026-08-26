@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+# The workflow will run on every push to the main branch
+on:
+  push:
+    branches: [ main ]
+
+# Essential permissions for the GitHub token to write to the gh-pages branch
+permissions:
+  contents: write # Required for peaceiris/actions-gh-pages [citation:3]
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the code
+      - uses: actions/checkout@v4
+
+      # 2. Set up Node.js
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Install dependencies
+      - run: npm ci  # `npm ci` is faster and more reliable for CI
+
+      # 4. Build the project
+      - run: npm run build  # This will create your 'dist' folder
+
+      # 5. Deploy the 'dist' folder to the gh-pages branch
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # The folder to deploy
