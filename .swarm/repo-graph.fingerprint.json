@@ -15,13 +15,17 @@
       "size": 2063,
       "mtimeMs": 1787676453151.3528
     },
+    ".swarm/loop/layout-shots-20260826T0000Z/baseline/App.tsx": {
+      "size": 25831,
+      "mtimeMs": 1787711821395.473
+    },
     "package.json": {
       "size": 600,
       "mtimeMs": 1787676393021
     },
     "src/App.tsx": {
-      "size": 25831,
-      "mtimeMs": 1787678808201.7463
+      "size": 26657,
+      "mtimeMs": 1787720732625.9973
     },
     "src/main.tsx": {
       "size": 232,

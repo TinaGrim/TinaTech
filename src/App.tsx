@@ -53,6 +53,7 @@ const education = [
 const projects = [
   {
     title: "POS Accessories CLI System",
+    slug: "pos-accessories-cli",
     subtitle: "Point-of-sale command-line system · Team project",
     summary:
       "Team-built point-of-sale application running in the terminal, backed by a Flask service and CSV-based storage for products and day-to-day shop operations.",
@@ -71,6 +72,7 @@ const projects = [
   },
   {
     title: "Elevator Visual & Analyze",
+    slug: "elevator-visual-analyze",
     subtitle: "Real-time elevator algorithm simulator",
     summary:
       "Desktop simulation and visualization tool that models elevator algorithms in real time, built with Rust and a clean GUI framework for education.",
@@ -89,6 +91,7 @@ const projects = [
   },
   {
     title: "LDPlayer Automation Tool",
+    slug: "ldplayer-automation",
     subtitle: "Android-emulator fleet automation",
     summary:
       "Automation and management tool for the LDPlayer Android emulator that drives multiple emulator instances simultaneously via configuration-driven control.",
@@ -107,6 +110,7 @@ const projects = [
   },
   {
     title: "ArtiFlow Article Management",
+    slug: "artiflow-article-management",
     subtitle: "Full-stack article management system",
     summary:
       "Full-stack platform for writing and managing articles, combining a FastAPI + MongoDB backend with modern Astro and React frontends.",
@@ -125,6 +129,7 @@ const projects = [
   },
   {
     title: "Joy Journal Daily",
+    slug: "joy-journal-daily",
     subtitle: "Daily journaling web app",
     summary:
       "A lightweight daily journal web app for recording thoughts and moments, written in TypeScript and deployed live on Vercel.",
@@ -142,6 +147,7 @@ const projects = [
   },
   {
     title: "GrimHill",
+    slug: "grimhill",
     subtitle: "Message encryption toolkit",
     summary:
       "Python utility for encrypting and decrypting messages so conversations stay secure from eavesdroppers.",
@@ -165,7 +171,7 @@ function Nav() {
   const links = ["About", "Stack", "Skills", "Experience", "Education", "Projects", "Contact"];
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-14">
         <span className="font-bold text-sm tracking-tight text-indigo-950">
           NT<span className="text-purple-600">.</span>
         </span>
@@ -195,14 +201,14 @@ function Hero() {
   return (
     <section
       id="about"
-      className="pt-28 pb-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+      className="pt-36 pb-28 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center"
     >
       <div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 mb-5">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-[11px] font-medium text-purple-700">Available for IT internship</span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-indigo-950 mb-4">
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight text-indigo-950 mb-4">
           Hi, I'm{" "}
           <span className="text-purple-600">Nheb</span>
           <br />
@@ -239,7 +245,7 @@ function Hero() {
             GitHub
           </a>
           <a
-            href="/NHEB_Tinarith_CV.docx"
+            href={`${import.meta.env.BASE_URL}NHEB_Tinarith_CV.docx`}
             download
             className="px-5 py-2.5 rounded-md border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-purple-50 hover:border-purple-300 transition-colors"
           >
@@ -256,7 +262,7 @@ function Hero() {
           { label: "Languages Used", value: "10", sub: "across my projects" },
           { label: "Languages Spoken", value: "3", sub: "Khmer · English · French" },
         ].map((s) => (
-          <div key={s.label} className="p-5 rounded-xl bg-[#F0EDFF] border border-purple-100">
+          <div key={s.label} className="p-7 rounded-xl bg-[#F0EDFF] border border-purple-100">
             <div className="text-3xl font-bold text-purple-600 mb-1">{s.value}</div>
             <div className="text-xs font-medium text-indigo-950">{s.label}</div>
             {s.sub && <div className="text-[11px] text-slate-400 mt-0.5">{s.sub}</div>}
@@ -296,8 +302,8 @@ function ArchDiagram() {
   ];
 
   return (
-    <section id="stack" className="py-20 bg-[#F0EDFF]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="stack" className="py-24 md:py-28 bg-[#F0EDFF]">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading tag="Architecture" title="How I build systems" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
           {layers.map((layer, i) => (
@@ -331,8 +337,8 @@ function Skills() {
   const tabs = Object.keys(skills) as (keyof typeof skills)[];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="skills" className="py-24 md:py-28">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading tag="Toolkit" title="Skills & Technologies" />
         <div className="flex flex-wrap gap-2 mt-8 mb-6">
           {tabs.map((tab) => (
@@ -366,8 +372,8 @@ function Skills() {
 
 function Experience() {
   return (
-    <section id="experience" className="py-20 bg-[#F0EDFF]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="experience" className="py-24 md:py-28 bg-[#F0EDFF]">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading tag="Career" title="Professional Experience" />
         <div className="mt-10 space-y-0">
           {experience.map((job, i) => (
@@ -410,8 +416,8 @@ function Experience() {
 
 function Education() {
   return (
-    <section id="education" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="education" className="py-24 md:py-28">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading tag="Study" title="Education" />
         <div className="mt-10 grid md:grid-cols-2 gap-4">
           {education.map((e) => (
@@ -437,8 +443,8 @@ function Projects() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <section id="projects" className="py-20 bg-[#F0EDFF]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-24 md:py-28 bg-[#F0EDFF]">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading tag="Work" title="Featured Projects" />
         <div className="mt-10 space-y-6">
           {projects.map((p, i) => (
@@ -449,11 +455,7 @@ function Projects() {
               {/* Card header */}
               <div className="grid md:grid-cols-[320px_1fr] gap-0">
                 <div className="relative bg-slate-100 overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-48 md:h-full object-cover"
-                  />
+                  <ProjectImage slug={p.slug} alt={p.title} fallback={p.image} />
                   <div className="absolute inset-0 bg-indigo-950/10" />
                 </div>
                 <div className="p-6 flex flex-col justify-between">
@@ -540,8 +542,8 @@ function Projects() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-20 bg-indigo-950">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section id="contact" className="py-24 md:py-28 bg-indigo-950">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">Get in Touch</p>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Let's build something<br />
@@ -592,8 +594,8 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="bg-indigo-950 border-t border-indigo-900 py-6">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
+    <footer className="bg-indigo-950 border-t border-indigo-900 py-8">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
         <span className="text-xs text-slate-500">© 2026 Nheb Tinarith. All rights reserved.</span>
         <span className="text-xs text-slate-500">
           Built with <span className="text-purple-400">React + Vite + Tailwind CSS</span>
@@ -629,5 +631,25 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+function ProjectImage({ slug, alt, fallback }: { slug: string; alt: string; fallback: string }) {
+  const [stage, setStage] = useState<"local" | "stock" | "empty">("local");
+  if (stage === "empty") {
+    return (
+      <div
+        aria-label={alt}
+        className="w-full h-56 md:h-full bg-gradient-to-br from-purple-100 via-[#F0EDFF] to-indigo-100"
+      />
+    );
+  }
+  return (
+    <img
+      src={stage === "local" ? `${import.meta.env.BASE_URL}screenshots/${slug}.png` : fallback}
+      alt={alt}
+      onError={() => setStage(stage === "local" ? "stock" : "empty")}
+      className="w-full h-56 md:h-full object-cover"
+    />
   );
 }

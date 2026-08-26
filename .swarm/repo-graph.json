@@ -141,9 +141,9 @@
         "findings": []
       }
     },
-    "/home/grim/Documents/Workspace/program/Web/Portfolio/src/App.tsx": {
-      "filePath": "/home/grim/Documents/Workspace/program/Web/Portfolio/src/App.tsx",
-      "moduleName": "src/App.tsx",
+    "/home/grim/Documents/Workspace/program/Web/Portfolio/.swarm/loop/layout-shots-20260826T0000Z/baseline/App.tsx": {
+      "filePath": "/home/grim/Documents/Workspace/program/Web/Portfolio/.swarm/loop/layout-shots-20260826T0000Z/baseline/App.tsx",
+      "moduleName": ".swarm/loop/layout-shots-20260826T0000Z/baseline/App.tsx",
       "exports": [
         "default"
       ],
@@ -160,9 +160,43 @@
         "react"
       ],
       "language": "tsx",
-      "mtime": "2026-08-25T17:26:48.201Z",
+      "mtime": "2026-08-26T02:37:01.395Z",
       "sizeBytes": 25831,
-      "mtimeMs": 1787678808201.7463,
+      "mtimeMs": 1787711821395.473,
+      "ontology": {
+        "roles": [
+          "source_module"
+        ],
+        "packageBoundary": ".swarm",
+        "routes": [],
+        "dataOperations": [],
+        "security": [],
+        "conventions": [],
+        "findings": []
+      }
+    },
+    "/home/grim/Documents/Workspace/program/Web/Portfolio/src/App.tsx": {
+      "filePath": "/home/grim/Documents/Workspace/program/Web/Portfolio/src/App.tsx",
+      "moduleName": "src/App.tsx",
+      "exports": [
+        "default"
+      ],
+      "exportLines": {
+        "default": 619
+      },
+      "exportRanges": {
+        "default": {
+          "startLine": 619,
+          "endLine": 635
+        }
+      },
+      "imports": [
+        "react"
+      ],
+      "language": "tsx",
+      "mtime": "2026-08-26T05:05:32.625Z",
+      "sizeBytes": 26657,
+      "mtimeMs": 1787720732625.9973,
       "ontology": {
         "roles": [
           "source_module"
@@ -311,9 +345,9 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2026-08-25T17:44:37.999Z",
+    "generatedAt": "2026-08-26T05:22:16.151Z",
     "generator": "repo-graph",
-    "nodeCount": 6,
+    "nodeCount": 7,
     "edgeCount": 3
   },
   "symbolEdges": [
