@@ -167,45 +167,14 @@ const projects = [
 
 // ─── Components ───────────────────────────────────────────────────────────────
 
-function LogoMark() {
-  const [failed, setFailed] = useState(false);
-  if (failed) {
-    return (
-      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
-        <defs>
-          <linearGradient id="nt-logo-gradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#7C3AED" />
-            <stop offset="100%" stopColor="#4338CA" />
-          </linearGradient>
-        </defs>
-        <rect width="32" height="32" rx="8" fill="url(#nt-logo-gradient)" />
-        <text x="16" y="21.5" textAnchor="middle" fontSize="13" fontWeight="700" fill="#fff" fontFamily="Poppins, sans-serif">NT</text>
-      </svg>
-    );
-  }
-  return (
-    <img
-      src={`${import.meta.env.BASE_URL}logo.png`}
-      alt=""
-      width={28}
-      height={28}
-      onError={() => setFailed(true)}
-      className="rounded-lg"
-    />
-  );
-}
-
 function Nav() {
   const links = ["About", "Stack", "Skills", "Experience", "Education", "Projects", "Contact"];
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-14">
-        <a href="#about" className="flex items-center gap-2">
-          <LogoMark />
-          <span className="font-bold text-sm tracking-tight text-indigo-950">
-            NT<span className="text-purple-600">.</span>
-          </span>
-        </a>
+        <span className="font-bold text-sm tracking-tight text-indigo-950">
+          NT<span className="text-purple-600">.</span>
+        </span>
         <nav className="hidden md:flex gap-6">
           {links.map((l) => (
             <a
