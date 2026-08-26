@@ -1,0 +1,3 @@
+{"type":"coder_settlement","action":"dispatched","timestamp":"2026-08-26T04:37:10.830Z","taskId":"1.1","transitionId":"coder:call_deff916ac629416a9ae436ed","actor":"ses_fc62db58effeluCPZzPjDZU598"}
+{"type":"coder_settlement","action":"recovered","timestamp":"2026-08-26T04:43:26.924Z","taskId":"1.1","transitionId":"coder:call_deff916ac629416a9ae436ed","actor":"swarm-recovery","forced":true,"stage":"ownership-release"}
+{"type":"coder_settlement","action":"aborted","timestamp":"2026-08-26T04:43:26.933Z","taskId":"1.1","transitionId":"coder:call_deff916ac629416a9ae436ed","actor":"ses_fc62db58effeluCPZzPjDZU598","reason":"launch workspace has no git baseline (not a git repository, or git unavailable at dispatch)"}

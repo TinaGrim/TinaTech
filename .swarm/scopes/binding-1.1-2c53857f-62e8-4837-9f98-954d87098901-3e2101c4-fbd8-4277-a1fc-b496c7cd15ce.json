@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "bindingId": "2c53857f-62e8-4837-9f98-954d87098901",
+  "generationId": "3e2101c4-fbd8-4277-a1fc-b496c7cd15ce",
+  "revision": 2,
+  "lifecycleState": "superseded",
+  "workspaceIdentity": "/home/grim/Documents/Workspace/program/Web/Portfolio",
+  "planId": "portfolio-Portfolio_Visual_Presentation___Screenshot_Pipeline",
+  "planStructureHash": "f20b27b6a78d25fc2b17275f824811121131e8c477aaba6bc4701e0a4d250de6",
+  "taskId": "1.1",
+  "ownerSessionId": "ses_fc62db58effeluCPZzPjDZU598",
+  "ownerMessageId": "call_deff916ac629416a9ae436ed",
+  "dispatchCallId": "call_deff916ac629416a9ae436ed",
+  "activation": "pending_child",
+  "source": "declare_scope",
+  "files": [
+    "src/App.tsx",
+    "src/index.css"
+  ],
+  "declaredAt": 1787719030801,
+  "updatedAt": 1787719031021,
+  "leaseStartedAt": 1787719030801,
+  "expiresAt": 1787719031021
+}

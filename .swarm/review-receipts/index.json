@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "96c92b17-3743-4366-b933-65d0d7bfb019",
+      "verdict": "approved",
+      "reviewed_at": "2026-08-26T02:55:04.258Z",
+      "scope_hash": "f89a8b44efd761c1d1f0e61b1748be23036021014518a45fbeb6bf93ce851ab9",
+      "agent": "curator",
+      "filename": "2026-08-26-96c92b17-3743-4366-b933-65d0d7bfb019.json"
+    },
+    {
+      "id": "abfa577e-9f18-4ab2-8b28-ae08ebf7d90d",
+      "verdict": "approved",
+      "reviewed_at": "2026-08-26T04:34:27.721Z",
+      "scope_hash": "d5615cf9235d365adf16ce8629e57560d3722e8d27d6349aa3ef8916cef67e07",
+      "agent": "curator",
+      "filename": "2026-08-26-abfa577e-9f18-4ab2-8b28-ae08ebf7d90d.json"
+    }
+  ]
+}

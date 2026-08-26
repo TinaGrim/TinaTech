@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "extractorStamp": "81b6db17b95ec792096ed077174094373e1225d0cec246b819cb821a621e4462",
+  "exclusionStamp": "cceddb84f07166eb48fa3314cdb4ef68e65c367692eed22b40d7163525bc2198",
+  "files": {
+    ".opencode/package.json": {
+      "size": 64,
+      "mtimeMs": 1787678389756.1008
+    },
+    ".swarm/bundled-skills/codebase-review-swarm/scripts/init-review-run.py": {
+      "size": 4410,
+      "mtimeMs": 1787676453151.1985
+    },
+    ".swarm/bundled-skills/codebase-review-swarm/scripts/validate-skill-package.py": {
+      "size": 2063,
+      "mtimeMs": 1787676453151.3528
+    },
+    "package.json": {
+      "size": 600,
+      "mtimeMs": 1787676393021
+    },
+    "src/App.tsx": {
+      "size": 25831,
+      "mtimeMs": 1787678808201.7463
+    },
+    "src/main.tsx": {
+      "size": 232,
+      "mtimeMs": 1787676393028
+    },
+    "src/vite-env.d.ts": {
+      "size": 38,
+      "mtimeMs": 1787676393033
+    },
+    "vite.config.ts": {
+      "size": 11654,
+      "mtimeMs": 1787676393036
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "run_id": "layout-shots-20260826T0000Z",
+  "objective": "Improve the website layout to be larger and more spacious. Replace all placeholder project images with real screenshots. For projects without images, generate a checklist of what screenshots to provide. Focus on visual presentation.",
+  "params": { "max_cycles": 3, "autonomy": "auto", "depth": "standard" },
+  "start_commit": null,
+  "git_note": "Directory is not a git repository; diff tracking uses baseline file copies under .swarm/loop/<run-id>/baseline/",
+  "cycle": 1,
+  "phase": "plan",
+  "success_criteria": [
+    "SC1: Layout is visibly larger and more spacious: wider container, larger section padding/typography, bigger project card images",
+    "SC2: Project images load from /screenshots/<name>.png local paths with automatic fallback so missing files never break the page",
+    "SC3: A screenshot checklist document exists listing every featured project with exact filename, what to capture, and how",
+    "SC4: Production build passes after all layout changes"
+  ],
+  "gates": [
+    { "cycle": 1, "phase": "brainstorm", "result": "passed", "at": "2026-08-26T02:50:00Z", "notes": "spec.md written; reviewer r1 NEEDS_REVISION (2 HIGH/8 MED) -> all resolved; r2 CONCERNS -> 2 prescribed wording fixes applied verbatim; disposition recorded per auto-autonomy" }
+  ],
+  "improvements": [],
+  "learnings": [],
+  "done": false,
+  "stop_reason": null,
+  "final_commit": null
+}

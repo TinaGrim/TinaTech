@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a full stack Python developer's skills, projects, and experience with a clean, recruiter-friendly portfolio highlighting real-world systems.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
