@@ -3,19 +3,19 @@
     "coder": {
       "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "reviewer": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "test_engineer": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
@@ -23,72 +23,72 @@
     "explorer": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "sme": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "researcher": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "critic": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "docs": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "docs_design": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "designer": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano",
+        "opencode/x-preview-f-free",
         "opencode/x-preview-f-free"
       ]
     },
     "critic_sounding_board": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
     },
     "critic_drift_verifier": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
     },
     "critic_hallucination_verifier": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
     },
     "critic_oversight": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
@@ -96,35 +96,35 @@
     "critic_architecture_supervisor": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano"
+        "opencode/x-preview-f-free"
       ]
     },
     "critic_finding_validator": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano"
+        "opencode/x-preview-f-free"
       ]
     },
     "curator_init": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
     },
     "curator_phase": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
     },
     "curator_postmortem": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
     },
     "curator_consolidation": {
-      "model": "opencode/gpt-5-nano",
+      "model": "opencode/x-preview-f-free",
       "fallback_models": [
         "opencode/x-preview-f-free"
       ]
@@ -132,13 +132,13 @@
     "skill_improver": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano"
+        "opencode/x-preview-f-free"
       ]
     },
     "spec_writer": {
       "model": "opencode/x-preview-f-free",
       "fallback_models": [
-        "opencode/gpt-5-nano"
+        "opencode/x-preview-f-free"
       ]
     }
   }
