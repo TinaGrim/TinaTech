@@ -180,7 +180,7 @@ function Nav() {
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="text-xs font-medium text-slate-500 hover:text-purple-600 transition-colors"
+              className="text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors"
             >
               {l}
             </a>
@@ -188,7 +188,7 @@ function Nav() {
         </nav>
         <a
           href="#contact"
-          className="text-xs font-semibold px-4 py-1.5 rounded-md bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+          className="text-sm font-semibold px-4 py-1.5 rounded-md bg-purple-600 text-white hover:bg-purple-700 transition-colors"
         >
           Hire me
         </a>
@@ -206,7 +206,7 @@ function Hero() {
       <div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 mb-5">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-[11px] font-medium text-purple-700">Available for IT internship</span>
+          <span className="text-xs font-medium text-purple-700">Available for IT internship</span>
         </div>
         <h1 className="text-5xl md:text-6xl font-bold leading-tight text-indigo-950 mb-4">
           Hi, I'm{" "}
@@ -214,13 +214,13 @@ function Hero() {
           <br />
           Tinarith.
         </h1>
-        <p className="text-sm font-medium text-slate-500 mb-2 uppercase tracking-widest">
+        <p className="text-base font-medium text-slate-500 mb-2 uppercase tracking-widest">
           Software Engineering Student · IT Internship Candidate
         </p>
-        <p className="text-xs text-slate-400 mb-6">
+        <p className="text-base text-slate-400 mb-6">
           Phnom Penh Thmei, SenSok, Phnom Penh, Cambodia
         </p>
-        <p className="text-sm text-slate-600 leading-relaxed mb-8 max-w-md">
+        <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-md">
           Second-year Software Engineering student at the Institute of Technology of Cambodia.
           I build practical tools across Python, C++, Rust and Go — from emulator automation
           and security utilities to real-time visualizations — and I'm looking for an IT
@@ -229,7 +229,7 @@ function Hero() {
         <div className="flex flex-wrap gap-3">
           <a
             href="#projects"
-            className="px-5 py-2.5 rounded-md bg-purple-600 text-white text-xs font-semibold hover:bg-purple-700 transition-colors"
+            className="px-5 py-2.5 rounded-md bg-purple-600 text-white text-sm font-semibold hover:bg-purple-700 transition-colors"
           >
             View Projects
           </a>
@@ -237,7 +237,7 @@ function Hero() {
             href={GITHUB}
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2.5 rounded-md border border-indigo-950 text-indigo-950 text-xs font-semibold hover:bg-purple-50 transition-colors flex items-center gap-2"
+            className="px-5 py-2.5 rounded-md border border-indigo-950 text-indigo-950 text-sm font-semibold hover:bg-purple-50 transition-colors flex items-center gap-2"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
@@ -247,7 +247,7 @@ function Hero() {
           <a
             href={`${import.meta.env.BASE_URL}NHEB_Tinarith_CV.docx`}
             download
-            className="px-5 py-2.5 rounded-md border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-purple-50 hover:border-purple-300 transition-colors"
+            className="px-5 py-2.5 rounded-md border border-slate-300 text-slate-700 text-sm font-semibold hover:bg-purple-50 hover:border-purple-300 transition-colors"
           >
             Resume ↓
           </a>
@@ -263,9 +263,9 @@ function Hero() {
           { label: "Languages Spoken", value: "3", sub: "Khmer · English · French" },
         ].map((s) => (
           <div key={s.label} className="p-7 rounded-xl bg-[#F0EDFF] border border-purple-100">
-            <div className="text-3xl font-bold text-purple-600 mb-1">{s.value}</div>
-            <div className="text-xs font-medium text-indigo-950">{s.label}</div>
-            {s.sub && <div className="text-[11px] text-slate-400 mt-0.5">{s.sub}</div>}
+            <div className="text-5xl font-bold text-purple-600 mb-1">{s.value}</div>
+            <div className="text-sm font-medium text-indigo-950">{s.label}</div>
+            {s.sub && <div className="text-xs text-slate-400 mt-0.5">{s.sub}</div>}
           </div>
         ))}
       </div>
@@ -314,11 +314,11 @@ function ArchDiagram() {
               <div className={`rounded-xl border p-5 ${layer.color} h-full`}>
                 <div className="flex items-center gap-2 mb-4">
                   <span className={`w-2 h-2 rounded-full ${layer.dot}`} />
-                  <span className="text-xs font-bold uppercase tracking-wider">{layer.label}</span>
+                  <span className="text-sm font-bold uppercase tracking-wider">{layer.label}</span>
                 </div>
                 <ul className="space-y-2">
                   {layer.items.map((item) => (
-                    <li key={item} className="text-[11px] font-medium text-slate-700 flex items-center gap-1.5">
+                    <li key={item} className="text-sm font-medium text-slate-700 flex items-center gap-1.5">
                       <span className="text-slate-400">→</span> {item}
                     </li>
                   ))}
@@ -345,7 +345,7 @@ function Skills() {
             <button
               key={tab}
               onClick={() => setActive(tab)}
-              className={`px-4 py-1.5 rounded-md text-xs font-semibold capitalize transition-colors ${
+              className={`px-4 py-1.5 rounded-md text-sm font-semibold capitalize transition-colors ${
                 active === tab
                   ? "bg-purple-600 text-white"
                   : "bg-purple-50 text-purple-700 hover:bg-purple-100"
@@ -359,7 +359,7 @@ function Skills() {
           {skills[active].map((skill) => (
             <span
               key={skill}
-              className="px-3 py-1.5 rounded-md border border-purple-200 bg-white text-xs font-medium text-indigo-900 hover:border-purple-400 hover:bg-purple-50 transition-colors cursor-default"
+              className="px-3 py-1.5 rounded-md border border-purple-200 bg-white text-sm font-medium text-indigo-900 hover:border-purple-400 hover:bg-purple-50 transition-colors cursor-default"
             >
               {skill}
             </span>
@@ -391,15 +391,15 @@ function Experience() {
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
                   <h3 className="text-sm font-bold text-indigo-950">{job.role}</h3>
                   {job.company && (
-                    <span className="text-xs font-semibold text-purple-600">{job.company}</span>
+                    <span className="text-sm font-semibold text-purple-600">{job.company}</span>
                   )}
-                  <span className="text-[11px] text-slate-400 ml-auto">
+                   <span className="text-xs text-slate-400 ml-auto">
                     {[job.location, job.period].filter(Boolean).join(" · ")}
                   </span>
                 </div>
                 <ul className="space-y-1.5">
                   {job.points.map((pt) => (
-                    <li key={pt} className="text-xs text-slate-600 leading-relaxed flex gap-2">
+                    <li key={pt} className="text-sm text-slate-600 leading-relaxed flex gap-2">
                       <span className="text-purple-400 mt-0.5 flex-shrink-0">▸</span>
                       {pt}
                     </li>
@@ -427,10 +427,10 @@ function Education() {
             >
               <div className="flex items-baseline justify-between gap-3 mb-1 flex-wrap">
                 <h3 className="text-sm font-bold text-indigo-950">{e.school}</h3>
-                <span className="text-[11px] text-slate-400">{e.period}</span>
+                <span className="text-sm text-slate-400">{e.period}</span>
               </div>
-              <p className="text-xs font-medium text-purple-600 mb-1">{e.degree}</p>
-              <p className="text-[11px] text-slate-400">{e.location}</p>
+              <p className="text-sm font-medium text-purple-600 mb-1">{e.degree}</p>
+               <p className="text-xs text-slate-400">{e.location}</p>
             </div>
           ))}
         </div>
@@ -462,21 +462,21 @@ function Projects() {
                   <div>
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {p.tags.map((t) => (
-                        <span key={t} className="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">
+                        <span key={t} className="text-sm font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">
                           {t}
                         </span>
                       ))}
                     </div>
                     <h3 className="text-base font-bold text-indigo-950 mb-0.5">{p.title}</h3>
-                    <p className="text-[11px] font-medium text-purple-600 mb-3">{p.subtitle}</p>
-                    <p className="text-xs text-slate-600 leading-relaxed">{p.summary}</p>
+                     <p className="text-xs font-medium text-purple-600 mb-3">{p.subtitle}</p>
+                    <p className="text-sm text-slate-600 leading-relaxed">{p.summary}</p>
                   </div>
                   <div className="flex items-center gap-3 mt-5">
                     <a
                       href={p.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-xs font-semibold text-indigo-950 border border-indigo-950 px-4 py-1.5 rounded-md hover:bg-purple-50 hover:border-purple-500 hover:text-purple-700 transition-colors"
+                      className="text-sm font-semibold text-indigo-950 border border-indigo-950 px-4 py-1.5 rounded-md hover:bg-purple-50 hover:border-purple-500 hover:text-purple-700 transition-colors"
                     >
                       GitHub ↗
                     </a>
@@ -485,14 +485,14 @@ function Projects() {
                         href={p.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-xs font-semibold text-white bg-purple-600 px-4 py-1.5 rounded-md hover:bg-purple-700 transition-colors"
+                        className="text-sm font-semibold text-white bg-purple-600 px-4 py-1.5 rounded-md hover:bg-purple-700 transition-colors"
                       >
                         Live Demo ↗
                       </a>
                     )}
                     <button
                       onClick={() => setExpanded(expanded === i ? null : i)}
-                      className="text-xs font-medium text-slate-400 hover:text-purple-600 transition-colors ml-auto"
+                      className="text-sm font-medium text-slate-400 hover:text-purple-600 transition-colors ml-auto"
                     >
                       {expanded === i ? "Less ↑" : "Case Study ↓"}
                     </button>
@@ -504,10 +504,10 @@ function Projects() {
               {expanded === i && (
                 <div className="border-t border-purple-100 grid md:grid-cols-2 gap-6 p-6 bg-[#F0EDFF]">
                   <div>
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-purple-600 mb-3">Key Features</h4>
+                    <h4 className="text-sm font-bold uppercase tracking-wider text-purple-600 mb-3">Key Features</h4>
                     <ul className="space-y-2">
                       {p.features.map((f) => (
-                        <li key={f} className="text-xs text-slate-700 flex gap-2 items-start">
+                        <li key={f} className="text-sm text-slate-700 flex gap-2 items-start">
                           <span className="text-purple-400 mt-0.5">✓</span>
                           {f}
                         </li>
@@ -515,8 +515,8 @@ function Projects() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-purple-600 mb-3">Architecture</h4>
-                    <p className="text-xs font-mono text-slate-700 bg-white border border-purple-100 rounded-lg p-3 leading-relaxed">
+                     <h4 className="text-xs font-bold uppercase tracking-wider text-purple-600 mb-3">Architecture</h4>
+                    <p className="text-sm font-mono text-slate-700 bg-white border border-purple-100 rounded-lg p-3 leading-relaxed">
                       {p.architecture}
                     </p>
                   </div>
@@ -530,7 +530,7 @@ function Projects() {
             href={`${GITHUB}?tab=repositories`}
             target="_blank"
             rel="noreferrer"
-            className="text-xs font-semibold text-purple-600 hover:text-purple-700 underline underline-offset-4"
+            className="text-sm font-semibold text-purple-600 hover:text-purple-700 underline underline-offset-4"
           >
             See all 22 repositories on GitHub ↗
           </a>
@@ -544,21 +544,21 @@ function Contact() {
   return (
     <section id="contact" className="py-24 md:py-28 bg-indigo-950">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-3">Get in Touch</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <p className="text-sm font-semibold uppercase tracking-widest text-purple-400 mb-3">Get in Touch</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Let's build something<br />
           <span className="text-purple-400">great together.</span>
         </h2>
         <p className="text-sm text-slate-400 mb-4 max-w-md mx-auto">
           Seeking an IT internship in Phnom Penh or remote. I usually respond within 24 hours.
         </p>
-        <p className="text-xs text-slate-500 mb-8">
+        <p className="text-sm text-slate-500 mb-8">
           Phnom Penh Thmei, SenSok, Phnom Penh, Cambodia · (+855) 10 273 611
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <a
             href="mailto:tinasora5553@gmail.com"
-            className="px-6 py-3 rounded-md bg-purple-600 text-white text-xs font-semibold hover:bg-purple-500 transition-colors"
+            className="px-6 py-3 rounded-md bg-purple-600 text-white text-sm font-semibold hover:bg-purple-500 transition-colors"
           >
             tinasora5553@gmail.com
           </a>
@@ -566,7 +566,7 @@ function Contact() {
             href="https://t.me/PanMengLy"
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3 rounded-md border border-slate-600 text-slate-300 text-xs font-semibold hover:border-purple-400 hover:text-purple-400 transition-colors"
+            className="px-6 py-3 rounded-md border border-slate-600 text-slate-300 text-sm font-semibold hover:border-purple-400 hover:text-purple-400 transition-colors"
           >
             Telegram ↗
           </a>
@@ -574,7 +574,7 @@ function Contact() {
             href="https://www.facebook.com/Tinahappy32"
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3 rounded-md border border-slate-600 text-slate-300 text-xs font-semibold hover:border-purple-400 hover:text-purple-400 transition-colors"
+            className="px-6 py-3 rounded-md border border-slate-600 text-slate-300 text-sm font-semibold hover:border-purple-400 hover:text-purple-400 transition-colors"
           >
             Facebook ↗
           </a>
@@ -582,7 +582,7 @@ function Contact() {
             href={GITHUB}
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3 rounded-md border border-slate-600 text-slate-300 text-xs font-semibold hover:border-purple-400 hover:text-purple-400 transition-colors"
+            className="px-6 py-3 rounded-md border border-slate-600 text-slate-300 text-sm font-semibold hover:border-purple-400 hover:text-purple-400 transition-colors"
           >
             GitHub ↗
           </a>
@@ -596,8 +596,8 @@ function Footer() {
   return (
     <footer className="bg-indigo-950 border-t border-indigo-900 py-8">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
-        <span className="text-xs text-slate-500">© 2026 Nheb Tinarith. All rights reserved.</span>
-        <span className="text-xs text-slate-500">
+        <span className="text-sm text-slate-500">© 2026 Nheb Tinarith. All rights reserved.</span>
+        <span className="text-sm text-slate-500">
           Built with <span className="text-purple-400">React + Vite + Tailwind CSS</span>
         </span>
       </div>
@@ -608,8 +608,8 @@ function Footer() {
 function SectionHeading({ tag, title }: { tag: string; title: string }) {
   return (
     <div>
-      <p className="text-[10px] font-bold uppercase tracking-widest text-purple-600 mb-2">{tag}</p>
-      <h2 className="text-2xl md:text-3xl font-bold text-indigo-950">{title}</h2>
+      <p className="text-sm font-bold uppercase tracking-widest text-purple-600 mb-2">{tag}</p>
+      <h2 className="text-3xl md:text-4xl font-bold text-indigo-950">{title}</h2>
     </div>
   );
 }
