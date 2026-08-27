@@ -5,7 +5,7 @@ import { useState } from "react";
 const GITHUB = "https://github.com/TinaGrim";
 
 const skills = {
-  languages: ["C++", "C", "Python", "TypeScript", "JavaScript", "HTML", "CSS"],
+  languages: ["C++", "C", "Python", "TypeScript", "JavaScript", "HTML", "CSS", "Rust", "Assembly", "PHP"],
   frameworks: ["Vue 3", "React", "Astro", "Flask", "FastAPI"],
   automation: ["Selenium", "Tkinter GUI", "Emulator Automation", "Telegram Bots"],
   security: ["Networking", "Encryption", "Capture The Flag (CTF)"],
